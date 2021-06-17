@@ -2,9 +2,11 @@
 
 class effects {
 
-
   public:
 
+    /**
+    * Strobs from left to right
+    */
     void ArrowRight(uint32_t c, uint8_t wait) {
       for (int j = 0; j < 4; j++) { // The j<# determines how many cycles
         for (uint16_t i = 0; i < strip.numPixels(); i++) {
@@ -12,9 +14,11 @@ class effects {
           strip.show();
           delay(wait);
         }
+        
         for (uint16_t i = 0; i < strip.numPixels(); i++) {
           strip.setPixelColor(i, 0);
         }
+        
         strip.show();
         delay(wait);
       }
