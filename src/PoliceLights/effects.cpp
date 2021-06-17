@@ -42,6 +42,12 @@ class effects {
       }
     }
 
+    /**
+    * Split the LEDs from midpoint
+    * Turn on/off either half
+    * @param c
+    * @param wait
+    */
     void WigWag(uint32_t c, uint8_t wait) {
       for (int j = 0; j < 10; j++) { // The j<# determines how many cycles
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
