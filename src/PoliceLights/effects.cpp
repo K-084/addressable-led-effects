@@ -6,6 +6,8 @@ class effects {
 
     /**
     * Strobs from left to right
+    * @param c
+    * @param wait
     */
     void ArrowRight(uint32_t c, uint8_t wait) {
       for (int j = 0; j < 4; j++) { // The j<# determines how many cycles
