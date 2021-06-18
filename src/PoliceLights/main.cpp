@@ -23,15 +23,16 @@
 */
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(20, PIN, NEO_GRB + NEO_KHZ800);
 
-//NOTE: I tested this code with an 8 LED module, but you should be able to daisy chain multiple modules
-//NOTE: Try changing the "8" to "4" to see how it reacts.
+/**
+ * NOTE: I tested this code with an 8 LED module, but you should be able to daisy chain multiple modules
+ * NOTE: Try changing the "8" to "4" to see how it reacts.
 
-// This warning is from the example, probably worth considering
-// IMPORTANT: To reduce NeoPixel burnout risk, add 1000 uF capacitor across
-// pixel power leads, add 300 - 500 Ohm resistor on first pixel's data input
-// and minimize distance between Arduino and first pixel.  Avoid connecting
-// on a live circuit...if you must, connect GND first.
-
+ * This warning is from the example, probably worth considering
+ * IMPORTANT: To reduce NeoPixel burnout risk, add 1000 uF capacitor across
+ * pixel power leads, add 300 - 500 Ohm resistor on first pixel's data input
+ * and minimize distance between Arduino and first pixel.  Avoid connecting
+ * on a live circuit...if you must, connect GND first.
+*/
 void setup() {
   /**
    * This stuff is from the example, I commented it out since I am not using a Trinket
@@ -89,6 +90,7 @@ void loop() {
   delay(1000);
   OnOuter(strip.Color(0, 0, 255)); // Blue
   OnOuter(strip.Color(0, 255, 0)); // Green
+  
   // Turns off all lights
   ClearLights();
   delay(5000);
