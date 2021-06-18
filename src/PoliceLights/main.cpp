@@ -32,12 +32,15 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(20, PIN, NEO_GRB + NEO_KHZ800);
 // on a live circuit...if you must, connect GND first.
 
 void setup() {
-  // This stuff is from the example, I commented it out since I am not using a Trinket
-  // This is for Trinket 5V 16MHz, you can remove these three lines if you are not using a Trinket
-  //#if defined (__AVR_ATtiny85__)
-  // if (F_CPU == 16000000) clock_prescale_set(clock_div_1);
-  //#endif
-  // End of trinket special code
+  /**
+   * This stuff is from the example, I commented it out since I am not using a Trinket
+   * This is for Trinket 5V 16MHz, you can remove these three lines if you are not using a Trinket
+   * #if defined (__AVR_ATtiny85__)
+   * if (F_CPU == 16000000) clock_prescale_set(clock_div_1);
+   * #endif
+   * End of trinket special code
+  */
+
   strip.begin();
   strip.show();
 }
@@ -48,7 +51,7 @@ void loop() {
    * for each color (R)ed, (G)reen, (B)lue
    *
    * The last number is a delay 0-255 range.
-   */
+  */
 
   // These are left/right signals
   ArrowLeft(strip.Color(0, 0, 255), 100); // Blue
@@ -63,7 +66,7 @@ void loop() {
   WigWag(strip.Color(255, 255, 0), 200); // Yellow
   ClearLights();
   delay(1000);
-  
+
   // This is a 2 color wigwag
   WigWag2(strip.Color(0, 0, 255), strip.Color(255, 0, 0), 200); // Blue and Red
   ClearLights();
