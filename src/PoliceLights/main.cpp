@@ -63,6 +63,7 @@ void loop() {
   WigWag(strip.Color(255, 255, 0), 200); // Yellow
   ClearLights();
   delay(1000);
+  
   // This is a 2 color wigwag
   WigWag2(strip.Color(0, 0, 255), strip.Color(255, 0, 0), 200); // Blue and Red
   ClearLights();
