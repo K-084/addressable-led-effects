@@ -51,7 +51,6 @@ void loop() {
   /*
    * For strip.Color(R, G, B), use 0-255 to set intensity
    * for each color (R)ed, (G)reen, (B)lue
-   *
    * The last number is a delay 0-255 range.
   */
 
