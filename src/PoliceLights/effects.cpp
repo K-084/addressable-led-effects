@@ -57,6 +57,7 @@ class effects {
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, c);
         }
+
         for (int i = (strip.numPixels() / 2); i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, 0);
         }
@@ -66,6 +67,7 @@ class effects {
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, 0);
         }
+        
         for (int i = (strip.numPixels() / 2); i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, c);
         }
