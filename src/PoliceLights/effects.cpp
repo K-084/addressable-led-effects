@@ -47,11 +47,11 @@ class effects {
     }
 
     /**
-    * Split the LEDs from midpoint
-    * Turn on/off either half
-    * @param c
-    * @param wait
-    */
+     * Split the LEDs from midpoint
+     * Turn on/off either half
+     * @param c
+     * @param wait
+     */
     void WigWag(uint32_t c, uint8_t wait) {
       for (int j = 0; j < 10; j++) { // The j<# determines how many cycles
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
@@ -67,7 +67,7 @@ class effects {
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, 0);
         }
-        
+
         for (int i = (strip.numPixels() / 2); i < strip.numPixels(); i = i + 1) {
           strip.setPixelColor(i, c);
         }
@@ -76,7 +76,12 @@ class effects {
       }
     }
 
-
+    /**
+     * 
+     * @param c
+     * @param c2
+     * @param wait
+     */
     void WigWag2(uint32_t c, uint32_t c2, uint8_t wait) {
       for (int j = 0; j < 20; j++) { // The j<# determines how many cycles
         for (int i = 0; i < strip.numPixels(); i = i + 1) {
@@ -99,6 +104,9 @@ class effects {
       }
     }
 
+    /**
+     * clears out the color in the leds
+     */
     void ClearLights() {
       for (int i = 0; i < strip.numPixels(); i = i + 1) {
         strip.setPixelColor(i, 0);    //turn every pixel off
