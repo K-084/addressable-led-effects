@@ -118,7 +118,7 @@ class effects {
      * Blink ends of the light strips
      * @param c
      * @param wait
-     */
+    */
     void BlinkOuter(uint32_t c, uint8_t wait) {
       for (int j = 0; j < 10; j++) { // The j<# determines how many cycles
         strip.setPixelColor(strip.numPixels() - 1, c);
