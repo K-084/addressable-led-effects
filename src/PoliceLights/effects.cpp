@@ -135,7 +135,7 @@ class effects {
     /**
      * Turn on ends of the light strips
      * @param c
-     */
+    */
     void OnOuter(uint32_t c) {
       strip.setPixelColor(strip.numPixels() - 1, c);
       strip.setPixelColor(0, c);
